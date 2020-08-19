@@ -1,3 +1,3 @@
 #!/bin/bash
 
-convert ~/Downloads/images-livros/amazon_aws.jpg ~/Downloads/imagens-livros/amazon_aws.png
+convert ~/Downloads/images-livros/$1.jpg ~/Downloads/imagens-livros/$1.png
