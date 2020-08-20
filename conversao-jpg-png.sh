@@ -1,7 +1,7 @@
 #!/bin/bash
-CAMINHO_IMAGENS = /c/Alura/DevOps/Shell Scripting parte1 - Começando seus scripts de automação de tarefas/imagens-livros
+cd /c/Alura/DevOps/imagens-livros
 
-for imagem in $@
+for imagem in *.jpg
 do
-    convert $CAMINHO_IMAGENS/$imagem.jpg $CAMINHO_IMAGENS/$imagem.png
+    convert $imagem $imagem.png
 done
