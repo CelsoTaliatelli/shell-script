@@ -23,7 +23,7 @@ do
 varrer_diretorio /c/Alura/DevOps/imagem-novos-livros
 if [ $? -eq 0]
 then
-    echo "Convertidos com sucesso"
+    echo "Conversao realizada com sucesso com sucesso"
 else
     echo "Houve um problema na conversao"
 fi
