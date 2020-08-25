@@ -2,16 +2,23 @@
 
 cd ~/apache.log
 
-if [ $1 == "GET" ]
-then 
+case $1 in
+        GET)
         cat apache.log | grep GET
-elif [ $1 == "POST" ]
-then
+        ;;
+
+        POST)
         cat apache.log | grep POST
-elif [ $1 == "PUT" ]
-then
+        ;;
+
+        PUT)
         cat apache.log | grep PUT
-elif [ $1 == "DELETE" ]
-then
+        ;;
+
+        DELETE)
         cat apache.log | grep DELETE
-fi
+        ;;
+
+        *)
+        echo "Parametro passado e invalido"
+esac
