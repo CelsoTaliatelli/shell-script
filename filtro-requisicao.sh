@@ -4,8 +4,11 @@ cd ~/apache.log
 
 if [ -z $1 ]
 then
-        read -p "Voce esqueceu de colocar o parametro(GET,PUT,POST,DELETE):" requisicao
-        letra_maiuscula=$(echo $requisicao | awk '{print toupper($1)}')
+        while [ -z $requisicao ]
+        do
+                read -p "Voce esqueceu de colocar o parametro(GET,PUT,POST,DELETE):" requisicao
+                letra_maiuscula=$(echo $requisicao | awk '{print toupper($1)}')
+        done
 else
         letra_maiuscula=$(echo $1 | awk '{print toupper($1)}')
 fi
